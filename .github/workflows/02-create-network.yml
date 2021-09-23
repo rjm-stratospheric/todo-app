@@ -1,0 +1,34 @@
+# This workflow creates all environment-specific resources that are shared across applications.
+# This needs to run before creating an application-specific environment.
+name: 02 - Manually create a shared environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environmentName:
+        description: 'The name of the environment to create.'
+        required: true
+        default: 'staging'
+
+jobs:
+  create-network-stack:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-20.04
+    name: Create the network stack
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11.0
+
+      - name: Check JDK installation
+        run: java -version
+
+      - name: Install AWS CDK
+        run: npm install -g aws-cdk
+
+      - name: Check CDK Installation
+        run: cdk --version

@@ -1,5 +1,5 @@
 {
-  "app": ".././gradlew :network-cdk:clean :network-cdk:build :network-cdk:run",
+  "app": ".././gradlew clean :network-cdk:build :network-cdk:run",
   "context": {
     "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
     "@aws-cdk/core:enableStackNameDuplicates": "true",
