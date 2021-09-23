@@ -1,0 +1,758 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "TheOnlyStackInTheCdkApp": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://230397928718/eu-west-3",
+      "properties": {
+        "templateFile": "TheOnlyStackInTheCdkApp.template.json",
+        "validateOnSynth": false,
+        "stackName": "todo-app-staging-Network"
+      },
+      "metadata": {
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpc1B686243",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:355:25)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1Subnet4F4E5928",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1RouteTableC747AD3F",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1RouteTableAssociation5C941457",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1DefaultRouteCF807989",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2Subnet30FDA70B",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2RouteTable0561445B",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2RouteTableAssociationEF52AA30",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2DefaultRouteD4410BF6",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet1SubnetE8388296",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet1RouteTableCA84423C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet1RouteTableAssociationB899C503",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet2SubnetD8B1F703",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet2RouteTable61AA9A5C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet2RouteTableAssociation57C9EEB1",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcIGW23E65886",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:380:25)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcVPCGW9B458D6C",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:383:25)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/cluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppcluster56255C7C",
+            "trace": [
+              "new Cluster (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ecs/lib/cluster.js:79:25)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancerSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadbalancerSecurityGroup0CC3935E",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:213:30)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/ingressToLoadbalancer": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppingressToLoadbalancer8F8BE4AF",
+            "trace": [
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadbalancer87457FA1",
+            "trace": [
+              "new BaseLoadBalancer (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.js:35:26)",
+              "new ApplicationLoadBalancer (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:28:9)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancer/httpListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadbalancerhttpListener784EE098",
+            "trace": [
+              "new BaseListener (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.js:21:26)",
+              "new ApplicationListener (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:32:9)",
+              "ApplicationLoadBalancer.addListener (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:74:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/dummyTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppdummyTargetGroup9BE58898",
+            "trace": [
+              "new TargetGroupBase (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:44:25)",
+              "new ApplicationTargetGroup (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:26:9)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpcId/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppvpcIdFB8341BB",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/httpListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApphttpListener8ED0F133",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/httpsListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApphttpsListener98EF2534",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerSecurityGroupId/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadBalancerSecurityGroupId14881F70",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/ecsClusterName/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppecsClusterNameE698D3A7",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/availabilityZoneOne/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppavailabilityZoneOne3FEEF6CE",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/availabilityZoneTwo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppavailabilityZoneTwo50744B18",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/isolatedSubnetOne/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppisolatedSubnetOne0D4910FF",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/isolatedSubnetTwo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkAppisolatedSubnetTwo5D49140A",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/publicSubnetOne/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApppublicSubnetOne6575975E",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/publicSubnetTwo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApppublicSubnetTwoFA277EEB",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerArn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadBalancerArnCD26ED54",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerDnsName/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadBalancerDnsNameB2B28FCB",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerCanonicalHostedZoneId/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyNetworkInThisCdkApploadBalancerCanonicalHostedZoneId107BFAFC",
+            "trace": [
+              "new StringParameter (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:98:26)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-9GzTbB/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8795:24)",
+              "/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime14694289287597591576/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "TheOnlyStackInTheCdkApp"
+    }
+  }
+}

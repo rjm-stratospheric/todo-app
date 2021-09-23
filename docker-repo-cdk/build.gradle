@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+dependencies {
+
+    implementation "dev.stratospheric:cdk-constructs:${cdkConstructsVersion}"
+
+    implementation project(':cdk-commons')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName('com.rjm.showtime.aws.stratospheric.todoapp.docker_repo_cdk.DockerRepoCdkApp')
+}

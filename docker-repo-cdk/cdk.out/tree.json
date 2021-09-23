@@ -1,0 +1,136 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.117.0"
+        }
+      },
+      "TheOnlyStackInTheCdkApp": {
+        "id": "TheOnlyStackInTheCdkApp",
+        "path": "TheOnlyStackInTheCdkApp",
+        "children": {
+          "TheOnlyDockerRepositoryInThisCdkApp": {
+            "id": "TheOnlyDockerRepositoryInThisCdkApp",
+            "path": "TheOnlyStackInTheCdkApp/TheOnlyDockerRepositoryInThisCdkApp",
+            "children": {
+              "ecrRepository": {
+                "id": "ecrRepository",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyDockerRepositoryInThisCdkApp/ecrRepository",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyDockerRepositoryInThisCdkApp/ecrRepository/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECR::Repository",
+                      "aws:cdk:cloudformation:props": {
+                        "lifecyclePolicy": {
+                          "lifecyclePolicyText": "{\"rules\":[{\"rulePriority\":1,\"description\":\"limit to 10 images\",\"selection\":{\"tagStatus\":\"any\",\"countType\":\"imageCountMoreThan\",\"countNumber\":10},\"action\":{\"type\":\"expire\"}}]}"
+                        },
+                        "repositoryName": "todo-app-backend-dockerrepository",
+                        "repositoryPolicyText": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "ecr:BatchCheckLayerAvailability",
+                                "ecr:GetDownloadUrlForLayer",
+                                "ecr:BatchGetImage"
+                              ],
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":iam::230397928718:root"
+                                    ]
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "Action": [
+                                "ecr:PutImage",
+                                "ecr:InitiateLayerUpload",
+                                "ecr:UploadLayerPart",
+                                "ecr:CompleteLayerUpload"
+                              ],
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":iam::230397928718:root"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecr.CfnRepository",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecr.Repository",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.117.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "TheOnlyStackInTheCdkApp/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "TheOnlyStackInTheCdkApp/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.117.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.117.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.117.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.117.0"
+    }
+  }
+}

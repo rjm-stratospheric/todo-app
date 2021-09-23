@@ -1,0 +1,64 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "TheOnlyStackInTheCdkApp": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://230397928718/eu-west-3",
+      "properties": {
+        "templateFile": "TheOnlyStackInTheCdkApp.template.json",
+        "validateOnSynth": false,
+        "stackName": "todo-app-backend-DockerRepository"
+      },
+      "metadata": {
+        "/TheOnlyStackInTheCdkApp/TheOnlyDockerRepositoryInThisCdkApp/ecrRepository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheOnlyDockerRepositoryInThisCdkAppecrRepositoryA79181CF",
+            "trace": [
+              "new Repository (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/aws-ecr/lib/repository.js:205:26)",
+              "/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/TheOnlyStackInTheCdkApp/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-7WUEDy/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8795:24)",
+              "/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/jsii-java-runtime9743763408522994448/lib/program.js:9656:46)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "TheOnlyStackInTheCdkApp"
+    }
+  }
+}

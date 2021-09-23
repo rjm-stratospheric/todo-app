@@ -1,0 +1,1242 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.117.0"
+        }
+      },
+      "TheOnlyStackInTheCdkApp": {
+        "id": "TheOnlyStackInTheCdkApp",
+        "path": "TheOnlyStackInTheCdkApp",
+        "children": {
+          "TheOnlyNetworkInThisCdkApp": {
+            "id": "TheOnlyNetworkInThisCdkApp",
+            "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp",
+            "children": {
+              "vpc": {
+                "id": "vpc",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/16",
+                        "enableDnsHostnames": true,
+                        "enableDnsSupport": true,
+                        "instanceTenancy": "default",
+                        "tags": [
+                          {
+                            "key": "environment",
+                            "value": "staging"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "staging-publicSubnetSubnet1": {
+                    "id": "staging-publicSubnetSubnet1",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.0.0/18",
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "availabilityZone": "eu-west-3a",
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "staging-publicSubnet"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.117.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "tags": [
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1RouteTableC747AD3F"
+                            },
+                            "subnetId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1Subnet4F4E5928"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet1/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1RouteTableC747AD3F"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcIGW23E65886"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "staging-publicSubnetSubnet2": {
+                    "id": "staging-publicSubnetSubnet2",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.64.0/18",
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "availabilityZone": "eu-west-3b",
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "staging-publicSubnet"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.117.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "tags": [
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2RouteTable0561445B"
+                            },
+                            "subnetId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2Subnet30FDA70B"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-publicSubnetSubnet2/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2RouteTable0561445B"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcIGW23E65886"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "staging-isolatedSubnetSubnet1": {
+                    "id": "staging-isolatedSubnetSubnet1",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.128.0/18",
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "availabilityZone": "eu-west-3a",
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "staging-isolatedSubnet"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Isolated"
+                              },
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.117.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "tags": [
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet1RouteTableCA84423C"
+                            },
+                            "subnetId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet1SubnetE8388296"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "staging-isolatedSubnetSubnet2": {
+                    "id": "staging-isolatedSubnetSubnet2",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.192.0/18",
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "availabilityZone": "eu-west-3b",
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "staging-isolatedSubnet"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Isolated"
+                              },
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.117.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                            },
+                            "tags": [
+                              {
+                                "key": "environment",
+                                "value": "staging"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.114.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/staging-isolatedSubnetSubnet2/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet2RouteTable61AA9A5C"
+                            },
+                            "subnetId": {
+                              "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet2SubnetD8B1F703"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "IGW": {
+                    "id": "IGW",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/IGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "environment",
+                            "value": "staging"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "VPCGW": {
+                    "id": "VPCGW",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpc/VPCGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                        },
+                        "internetGatewayId": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpcIGW23E65886"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.Vpc",
+                  "version": "1.114.0"
+                }
+              },
+              "cluster": {
+                "id": "cluster",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/cluster",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/cluster/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECS::Cluster",
+                      "aws:cdk:cloudformation:props": {
+                        "clusterName": "staging-ecsCluster",
+                        "tags": [
+                          {
+                            "key": "environment",
+                            "value": "staging"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecs.CfnCluster",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.Cluster",
+                  "version": "1.114.0"
+                }
+              },
+              "loadbalancerSecurityGroup": {
+                "id": "loadbalancerSecurityGroup",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancerSecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancerSecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "Public access to the load balancer.",
+                        "groupName": "staging-loadbalancerSecurityGroup",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "securityGroupIngress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "ipProtocol": "tcp",
+                            "fromPort": 80,
+                            "toPort": 80,
+                            "description": "Allow from anyone on port 80"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "environment",
+                            "value": "staging"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                  "version": "1.114.0"
+                }
+              },
+              "ingressToLoadbalancer": {
+                "id": "ingressToLoadbalancer",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/ingressToLoadbalancer",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                  "aws:cdk:cloudformation:props": {
+                    "ipProtocol": "-1",
+                    "cidrIp": "0.0.0.0/0",
+                    "groupId": {
+                      "Fn::GetAtt": [
+                        "TheOnlyNetworkInThisCdkApploadbalancerSecurityGroup0CC3935E",
+                        "GroupId"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroupIngress",
+                  "version": "1.114.0"
+                }
+              },
+              "loadbalancer": {
+                "id": "loadbalancer",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancer",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+                      "aws:cdk:cloudformation:props": {
+                        "loadBalancerAttributes": [
+                          {
+                            "key": "deletion_protection.enabled",
+                            "value": "false"
+                          }
+                        ],
+                        "name": "staging-loadbalancer",
+                        "scheme": "internet-facing",
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "TheOnlyNetworkInThisCdkApploadbalancerSecurityGroup0CC3935E",
+                              "GroupId"
+                            ]
+                          }
+                        ],
+                        "subnets": [
+                          {
+                            "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1Subnet4F4E5928"
+                          },
+                          {
+                            "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2Subnet30FDA70B"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "environment",
+                            "value": "staging"
+                          }
+                        ],
+                        "type": "application"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnLoadBalancer",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "httpListener": {
+                    "id": "httpListener",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancer/httpListener",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadbalancer/httpListener/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
+                          "aws:cdk:cloudformation:props": {
+                            "defaultActions": [
+                              {
+                                "type": "forward",
+                                "targetGroupArn": {
+                                  "Ref": "TheOnlyNetworkInThisCdkAppdummyTargetGroup9BE58898"
+                                }
+                              }
+                            ],
+                            "loadBalancerArn": {
+                              "Ref": "TheOnlyNetworkInThisCdkApploadbalancer87457FA1"
+                            },
+                            "port": 80,
+                            "protocol": "HTTP"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnListener",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.ApplicationListener",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer",
+                  "version": "1.114.0"
+                }
+              },
+              "dummyTargetGroup": {
+                "id": "dummyTargetGroup",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/dummyTargetGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/dummyTargetGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "staging-no-op-targetGroup",
+                        "port": 8080,
+                        "protocol": "HTTP",
+                        "tags": [
+                          {
+                            "key": "environment",
+                            "value": "staging"
+                          }
+                        ],
+                        "targetType": "ip",
+                        "vpcId": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnTargetGroup",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-elasticloadbalancingv2.ApplicationTargetGroup",
+                  "version": "1.114.0"
+                }
+              },
+              "vpcId": {
+                "id": "vpcId",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpcId",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/vpcId/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpc1B686243"
+                        },
+                        "name": "staging-Network-vpcId",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "httpListener": {
+                "id": "httpListener",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/httpListener",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/httpListener/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkApploadbalancerhttpListener784EE098"
+                        },
+                        "name": "staging-Network-httpListenerArn",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "httpsListener": {
+                "id": "httpsListener",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/httpsListener",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/httpsListener/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": "null",
+                        "name": "staging-Network-httpsListenerArn",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "loadBalancerSecurityGroupId": {
+                "id": "loadBalancerSecurityGroupId",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerSecurityGroupId",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerSecurityGroupId/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Fn::GetAtt": [
+                            "TheOnlyNetworkInThisCdkApploadbalancerSecurityGroup0CC3935E",
+                            "GroupId"
+                          ]
+                        },
+                        "name": "staging-Network-loadBalancerSecurityGroupId",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "ecsClusterName": {
+                "id": "ecsClusterName",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/ecsClusterName",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/ecsClusterName/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppcluster56255C7C"
+                        },
+                        "name": "staging-Network-ecsClusterName",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "availabilityZoneOne": {
+                "id": "availabilityZoneOne",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/availabilityZoneOne",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/availabilityZoneOne/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": "eu-west-3a",
+                        "name": "staging-Network-availabilityZoneOne",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "availabilityZoneTwo": {
+                "id": "availabilityZoneTwo",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/availabilityZoneTwo",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/availabilityZoneTwo/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": "eu-west-3b",
+                        "name": "staging-Network-availabilityZoneTwo",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "isolatedSubnetOne": {
+                "id": "isolatedSubnetOne",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/isolatedSubnetOne",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/isolatedSubnetOne/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet1SubnetE8388296"
+                        },
+                        "name": "staging-Network-isolatedSubnetIdOne",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "isolatedSubnetTwo": {
+                "id": "isolatedSubnetTwo",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/isolatedSubnetTwo",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/isolatedSubnetTwo/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingisolatedSubnetSubnet2SubnetD8B1F703"
+                        },
+                        "name": "staging-Network-isolatedSubnetIdTwo",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "publicSubnetOne": {
+                "id": "publicSubnetOne",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/publicSubnetOne",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/publicSubnetOne/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet1Subnet4F4E5928"
+                        },
+                        "name": "staging-Network-publicSubnetIdOne",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "publicSubnetTwo": {
+                "id": "publicSubnetTwo",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/publicSubnetTwo",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/publicSubnetTwo/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkAppvpcstagingpublicSubnetSubnet2Subnet30FDA70B"
+                        },
+                        "name": "staging-Network-publicSubnetIdTwo",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "loadBalancerArn": {
+                "id": "loadBalancerArn",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerArn",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerArn/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "TheOnlyNetworkInThisCdkApploadbalancer87457FA1"
+                        },
+                        "name": "staging-Network-loadBalancerArn",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "loadBalancerDnsName": {
+                "id": "loadBalancerDnsName",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerDnsName",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerDnsName/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Fn::GetAtt": [
+                            "TheOnlyNetworkInThisCdkApploadbalancer87457FA1",
+                            "DNSName"
+                          ]
+                        },
+                        "name": "staging-Network-loadBalancerDnsName",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              },
+              "loadBalancerCanonicalHostedZoneId": {
+                "id": "loadBalancerCanonicalHostedZoneId",
+                "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerCanonicalHostedZoneId",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "TheOnlyStackInTheCdkApp/TheOnlyNetworkInThisCdkApp/loadBalancerCanonicalHostedZoneId/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Fn::GetAtt": [
+                            "TheOnlyNetworkInThisCdkApploadbalancer87457FA1",
+                            "CanonicalHostedZoneID"
+                          ]
+                        },
+                        "name": "staging-Network-loadBalancerCanonicalHostedZoneId",
+                        "tags": {
+                          "environment": "staging"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.117.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "TheOnlyStackInTheCdkApp/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "TheOnlyStackInTheCdkApp/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.117.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.117.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.117.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.117.0"
+    }
+  }
+}

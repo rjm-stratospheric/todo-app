@@ -1,0 +1,74 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.experimental.aot' version '0.10.3'
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+ext {
+    set('springCloudVersion', 'Hoxton.SR12')
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+bootRun {
+    jvmArgs = [
+            "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005",
+            "-Dspring.profiles.active=dev",
+    ]
+}
+
+/*
+springAot {
+    verify = false
+    debugVerify = false
+    removeSpelSupport = true
+}
+*/
+
+bootBuildImage {
+    cleanCache = false
+    verboseLogging = true
+    imageName = "${project.name}:${project.version}" //myorg/myapp:version
+    builder = "paketobuildpacks/builder:tiny"
+    environment = [
+        "BP_NATIVE_IMAGE" : "true",
+        "BP_NATIVE_IMAGE_BUILD_ARGUMENTS" : "-Dnative-image.xmx=5g -H:+ReportExceptionStackTraces"
+        //"BP_NATIVE_IMAGE_BUILD_ARGUMENTS" : "--verbose -Dnative-image.xss=5g -Dnative-image.xms=5g -H:+ReportExceptionStackTraces"
+    ]
+    docker {
+        bindings = ["/opt/repos/showtime/aws/stratospheric/todo-app/bindings/ca-certificates:/platform/bindings/ca-certificates"]
+/*
+        publishRegistry {
+            username = "obi300"
+            password = "nanayss091XA_"
+            url = "https://hub.docker.com/repository/docker/obi300/todo-app-backend"
+            email = "obi300@yahoo.es"
+        }
+*/
+    }
+}
+

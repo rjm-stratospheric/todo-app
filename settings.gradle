@@ -1,0 +1,20 @@
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url 'https://repo.spring.io/release/' }
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://repo.spring.io/snapshot' }
+    }
+}
+
+rootProject.name = 'todo-app'
+
+include 'backend'
+include 'backend-cdk'
+include 'cdk-commons'
+include 'docker-repo-cdk'
+include 'network-cdk'
+include 'service-cdk'
+include 'bindings'
+

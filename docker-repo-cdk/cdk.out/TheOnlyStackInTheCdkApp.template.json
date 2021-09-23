@@ -1,0 +1,77 @@
+{
+  "Resources": {
+    "TheOnlyDockerRepositoryInThisCdkAppecrRepositoryA79181CF": {
+      "Type": "AWS::ECR::Repository",
+      "Properties": {
+        "LifecyclePolicy": {
+          "LifecyclePolicyText": "{\"rules\":[{\"rulePriority\":1,\"description\":\"limit to 10 images\",\"selection\":{\"tagStatus\":\"any\",\"countType\":\"imageCountMoreThan\",\"countNumber\":10},\"action\":{\"type\":\"expire\"}}]}"
+        },
+        "RepositoryName": "todo-app-backend-dockerrepository",
+        "RepositoryPolicyText": {
+          "Statement": [
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::230397928718:root"
+                    ]
+                  ]
+                }
+              }
+            },
+            {
+              "Action": [
+                "ecr:PutImage",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:CompleteLayerUpload"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::230397928718:root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "TheOnlyStackInTheCdkApp/TheOnlyDockerRepositoryInThisCdkApp/ecrRepository/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAA02LQQrCMBAA39J7us2C4FXozWN8QVhXiMVEdjcWCfm7lFLwNAzMIDTEM/jhElcd6b5MVISh3SzS4uaS1aSSufmRA2upQtwd4un/2Mgk0AK/iyYr8t37w3p31/iJEyJ4QD88NaVRarb0Ygg7fyr1XJqJAAAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "TheOnlyStackInTheCdkApp/CDKMetadata/Default"
+      }
+    }
+  }
+}
