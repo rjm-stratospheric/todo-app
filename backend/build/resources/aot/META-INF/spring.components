@@ -1,4 +1,4 @@
 #
-#Wed Sep 22 08:53:22 CEST 2021
+#Thu Sep 23 09:31:15 CEST 2021
 com.rjm.showtime.aws.stratospheric.todoapp.backend.api.PingRestController=org.springframework.stereotype.Component
 com.rjm.showtime.aws.stratospheric.todoapp.backend.BackendApp=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
