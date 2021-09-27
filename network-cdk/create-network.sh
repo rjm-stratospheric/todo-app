@@ -1,9 +1,11 @@
 #!/bin/bash
 
+AWS_ACCESS_KEY_ID=${1}
+AWS_SECRET_ACCESS_KEY=${2}
+AWS_DEFAULT_REGION=${3}
+
 cdk deploy \
-  --profile ${1} \
-  -c accountId=${2} \
-  -c region=${3} \
-  -c projectName=${4} \
-  -c environmentName=${5} #\
+  -c accountId=${4} \
+  -c projectName=${5} \
+  -c environmentName=${6} #\
   # -c sslCertificateArn=${6}

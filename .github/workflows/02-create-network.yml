@@ -5,6 +5,10 @@ name: 02 - Manually create a shared environment
 on:
   workflow_dispatch:
     inputs:
+      projectName:
+        description: 'The name of the project for which to create the environment.'
+        required: true
+        default: 'todo-app'
       environmentName:
         description: 'The name of the environment to create.'
         required: true
@@ -32,3 +36,8 @@ jobs:
 
       - name: Check CDK Installation
         run: cdk --version
+
+      - name: Trigger Network Stack Creation
+        run: |
+          cd network-cdk
+          ./create-network.sh ${{ secrets.AWS_ACCESS_KEY_ID }} ${{ secrets.AWS_SECRET_ACCESS_KEY }} ${{ secrets.AWS_REGION }} {{secrets.ACCOUNT_ID}} ${{ github.event.inputs.environmentName }} ${{ github.event.inputs.environmentName }}
